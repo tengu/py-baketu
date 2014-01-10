@@ -1,0 +1,3 @@
+
+from baketu import main
+

@@ -1,0 +1,6 @@
+{
+    "bucket": "hoge",
+    "access_token": "./x.root",
+    "name": "./test/{md5}{suffix}", 
+    "driver": "fs"
+}

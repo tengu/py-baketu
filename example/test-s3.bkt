@@ -1,0 +1,7 @@
+{
+    "bucket": "cdn.baketu",
+    "access": { "token": "XXXXXXXXXXXXXXXX", 
+                "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX" },
+    "name": "/test/{md5}{suffix}", 
+    "driver": "s3"
+}
