@@ -35,6 +35,7 @@ class Bucket(driver.Bucket):
             if e.error_code==404 and create:
                 self.s3_bucket=session.s3_conn.create_bucket(name)
             else:
+                print >>sys.stderr, 'no bucket', name, 'in', session, create
                 raise
 
 class Session(driver.Session):

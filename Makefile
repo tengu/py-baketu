@@ -8,7 +8,7 @@ clean:
 python=$(HOME)/ve/bin/python
 #python=python
 
-bucket=cdn.ikulist.me
+bucket=cdn.example.com
 
 tt:
 	find x.img -name '*.jpg' \

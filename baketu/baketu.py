@@ -72,6 +72,9 @@ def already_pushed(logpath):
     if not logpath:
         return None             # not sure
 
+    if not os.path.exists(logpath):
+        return False            # no log, so probably not pushed.
+
     records=[json.loads(line) for line in file(logpath).readlines()]
     if not records:
         return False            # hasn't been pushed
@@ -182,6 +185,10 @@ def register_commands(baker=None):
         print cfg
 
         b=make_bucket(**cfg)
+
+        if files==('stdin',):
+            files=(l.strip() for l in sys.stdin.readlines())
+
         _push(b, files, name)
 
         
